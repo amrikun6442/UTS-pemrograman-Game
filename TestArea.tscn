@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dcnwvutpe3wv4"]
+
+[ext_resource type="Texture2D" uid="uid://cm1yxf0pykgxy" path="res://env_textures/Dark/texture_01.png" id="1_y61ny"]
+[ext_resource type="PackedScene" uid="uid://d2l561tkvjnw7" path="res://player.tscn" id="2_fgfqk"]
+[ext_resource type="PackedScene" uid="uid://c2j3j4hydhxki" path="res://apel.tscn" id="3_fgfqk"]
+[ext_resource type="Script" uid="uid://paiuryi0nkj4" path="res://hud.gd" id="4_jb24s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jb24s"]
+albedo_texture = ExtResource("1_y61ny")
+
+[node name="Node3D" type="Node3D" unique_id=1513873844]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1107755865]
+use_collision = true
+size = Vector3(25, 1, 25)
+material = SubResource("StandardMaterial3D_jb24s")
+
+[node name="Player" parent="." unique_id=256017772 instance=ExtResource("2_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51303405, 0.027045012)
+
+[node name="Apel" parent="." unique_id=1685848192 instance=ExtResource("3_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1494365, 0.99999976, 3.2506096)
+
+[node name="Apel2" parent="." unique_id=267664382 instance=ExtResource("3_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1494365, 0.99999976, 3.2506096)
+
+[node name="Apel3" parent="." unique_id=2081724714 instance=ExtResource("3_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1494365, 0.99999976, 3.2506096)
+
+[node name="Apel4" parent="." unique_id=706036769 instance=ExtResource("3_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1494365, 0.99999976, 3.2506096)
+
+[node name="Apel5" parent="." unique_id=202974189 instance=ExtResource("3_fgfqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1494365, 0.99999976, 3.2506096)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=768843273]
+script = ExtResource("4_jb24s")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1878909569]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelHP" type="Label" parent="CanvasLayer/Control" unique_id=1788693997]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 71.0
+offset_bottom = 69.0
+text = "HP:3/5
+"
+
+[node name="SliderSFX" type="HSlider" parent="CanvasLayer/Control" unique_id=8618187]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_right = 142.0
+offset_bottom = 16.0
+grow_horizontal = 0
