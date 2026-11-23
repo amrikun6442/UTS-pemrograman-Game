@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://KoinEmas.gd" id="1_koin"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emas"]
+albedo_color = Color(1, 0.84, 0, 1)
+metallic = 0.85
+roughness = 0.25
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_koin"]
+material = SubResource("StandardMaterial3D_emas")
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.12
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_koin"]
+radius = 0.45
+
+[node name="KoinEmas" type="Area3D"]
+script = ExtResource("1_koin")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_koin")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_koin")
