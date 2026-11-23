@@ -2,7 +2,7 @@
 
 * **Nama:** Satria Amri Pamungkas
 * **NIM:** [52304110020, digit terakhir 0]
-* **Varian Tugas:** Digit 0 (Collectible: Koin Emas, Efek: HP +1 maks 5, HUD: Label "HP: n/5" di pojok kiri atas)
+* **Varian Tugas:** Digit 0 (Collectible: Koin Emas, Efek: Skor +10, HUD: Label "Skor : N" di pojok kanan atas)
 
 ## Kontrol Permainan
 * **W, A, S, D / Tombol Panah:** Menggerakkan karakter
